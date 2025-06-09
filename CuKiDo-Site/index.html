@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CuKiDo - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="container">
+    <h1>CuKiDo</h1>
+    <p>The Premium Cookie Dough Destination</p>
+  </header>
+  
+  <!-- Navigation -->
+  <nav class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Slider Section -->
+  <section id="landing" class="container">
+    <div class="slider">
+      <div class="slide active">
+        <img src="https://via.placeholder.com/1200x400?text=Welcome+to+CuKiDo" alt="Banner 1">
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/1200x400?text=Delicious+Cookie+Dough" alt="Banner 2">
+      </div>
+      <div class="slide">
+        <img src="https://via.placeholder.com/1200x400?text=Fresh+Ingredients,+Bold+Flavors" alt="Banner 3">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="container">
+    <p>&copy; 2025 CuKiDo. All rights reserved.</p>
+  </footer>
+  
+  <!-- Slider Script -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    setInterval(nextSlide, 3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+/* style.css */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: #131921;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+header h1 {
+  font-size: 2em;
+}
+header p {
+  font-size: 1.2em;
+}
+
+/* Navigation */
+nav {
+  background: #232f3e;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 10px;
+}
+nav ul li a {
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  background: #37475a;
+}
+
+/* Slider (Moving Banners) */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+}
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sections & Headings */
+section {
+  padding: 40px 0;
+}
+section h2 {
+  text-align: center;
+  color: #131921;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Store Page - Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.product {
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 280px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+.product h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+.product p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.product button {
+  background: #febd69;
+  border: none;
+  padding: 10px 20px;
+  color: #111;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.product button:hover {
+  background: #f3a847;
+}
+
+/* Contact Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  margin-top: 20px;
+  background: #febd69;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+form button:hover {
+  background: #f3a847;
+}
+
+/* Footer */
+footer {
+  background: #232f3e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
